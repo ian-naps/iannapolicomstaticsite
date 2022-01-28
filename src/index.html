@@ -11,8 +11,15 @@
 <body>
   <main>
     <h1>Hello World! Welcome to my website.</h1>
+    <p>Loading content from the API: <b id="name">...</b></p>
   </main>
-  <p>Thanks for visiting my website. Check in periodically as I push updates and learn more Javascript. </p>
+
+  <script>
+  (async function() {
+      const { text } = await( await fetch(`/api/message`)).json();
+      document.querySelector('#name').textContent = text;
+  }())
+  </script>
 </body>
 
 </html>
