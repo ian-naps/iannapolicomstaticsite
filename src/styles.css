@@ -22,7 +22,7 @@ body {
 }
 
 .header {
-  background-image: url('css_images/background-image-clouds.jpg');
+  background-image: url('./css-images/clouds.jpg');
   background-size: cover;
   background-position: center;
   position: relative;
