@@ -22,7 +22,7 @@ body {
 }
 
 .header {
-  background-image: url('/css-images/tree.jpg');
+  background-image: url('css-images/tree.jpg');
   background-size: cover;
   background-position: center;
   position: relative;
