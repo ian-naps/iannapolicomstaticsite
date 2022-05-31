@@ -76,13 +76,13 @@
   <form onsubmit="sendEmail(); reset(); return false;">
           <h3 class="feature-title">Get in Touch!</h3>
           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Name" name="">
+            <input type="text" id="name" class="form-control" placeholder="Name" name="name">
           </div>
           <div class="form-group">
-              <input type="email" class="form-control" placeholder="Email Address" name="email">
+              <input type="email" id="email" class="form-control" placeholder="Email Address" name="email">
           </div>
           <div class="form-group">
-              <textarea class="form-control" rows="4"></textarea>
+              <textarea class="form-control" rows="4" placeholder="Message" id="message"></textarea>
           </div>
           <input type="submit" class="btn btn-secondary btn-block" value="Send" name="">
   </form>        
@@ -94,11 +94,11 @@
                   Username : "iannapoli92@gmail.com",
                   Password : "ubEQ::9M2Q+pUe9k",
                   To : 'ian.napoli8@gmail.com',
-                  From : document.getElementById("Email Address").value,
+                  From : document.getElementById("email").value,
                   Subject : "New Contact Form Inquiry",
-                  Body : "And this is the body"
+                  Body : "Name: " + document.getElementById("name").value + "<br> Email: " + document.getElementById("email").value + "<br> Message: " + document.getElementById("message").value
               }).then(
-                message => alert(message)
+                message => alert("Message Sent Successfully")
               );
             }
           </script>
